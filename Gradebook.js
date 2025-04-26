@@ -4,7 +4,7 @@ function fetchGradeData() {
     // Placeholder return value to simulate data fetching
     return [
         { name: "breanna", assignment1: "A", assignment2: "B+", assignment3: "A-" },
-        { name: "breanna lee", assignment1: "B", assignment2: "A", assignment3: "B+" }
+        { name: "breanna", assignment1: "B", assignment2: "A", assignment3: "B+" }
     ];
 }
 
@@ -19,10 +19,10 @@ function populateGradebook(data) {
     data.forEach((student) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${breanna.breanna}</td>
-            <td>${breanna.assignment1}</td>
-            <td>${breanna.assignment2}</td>
-            <td>${breanna.assignment3}</td>
+            <td>${student.name}</td>
+            <td>${student.assignment1}</td>
+            <td>${student.assignment2}</td>
+            <td>${student.assignment3}</td>
         `;
         tbody.appendChild(row);
     });
